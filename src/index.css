@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+
+body {
+  background-color: #2e3047;
+  color: #979ddd;
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
