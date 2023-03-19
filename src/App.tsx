@@ -8,8 +8,19 @@ function App() {
     mode: "",
     time: "",
   });
+  const [addSleep, setAddSleep] = useState(true);
   const [fallAsleep, setFallAsleep] = useState(15);
   const [startMenu, setStartMenu] = useState(true);
+
+  const handleExtraSleep = () => {
+    setAddSleep((prevState) => !prevState);
+  };
+
+  const handleAsleepMins = (mins: number) => {
+    if (mins < 1) setFallAsleep(1);
+    else if (mins > 60) setFallAsleep(60);
+    else setFallAsleep(Math.abs(mins));
+  };
 
   return (
     <div className='App'>
@@ -17,6 +28,35 @@ function App() {
       <div className='App--body'>
         {startMenu ? <FormPage></FormPage> : <SleepPage></SleepPage>}
       </div>
+      <div className='App--add-sleep-time'>
+        <input
+          type='checkbox'
+          name='App--sleep-checkbox'
+          id='App--sleep-checkbox'
+          checked={addSleep}
+          onChange={handleExtraSleep}
+        />
+        <label htmlFor='App--sleep-checkbox'>
+          <span className='App--sleep-checkbox-text'>
+            Include
+            <input
+              type='number'
+              name='App--fall-asleep-mins'
+              id='App--fall-asleep-mins'
+              min={1}
+              max={60}
+              value={fallAsleep}
+              onChange={(e) => handleAsleepMins(parseInt(e.target.value))}
+            />
+            minutes to fall asleep
+          </span>
+        </label>
+      </div>
+      {!startMenu && (
+        <div className='App--restart'>
+          <button onClick={() => setStartMenu(true)}>Restart</button>
+        </div>
+      )}
       <div className='App--footer'>
         <a href='https://github.com/robsassack/sleep-calc-react/'>
           <i className='fa-brands fa-github github-logo'></i>

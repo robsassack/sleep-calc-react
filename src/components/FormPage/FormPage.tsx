@@ -1,5 +1,5 @@
 function FormPage() {
-  return <div className='form-page'>Form page</div>;
+  return <div className='form'>Form page</div>;
 }
 
 export default FormPage;

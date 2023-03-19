@@ -1,5 +1,5 @@
 function SleepPage() {
-  return <div className='SleepPage'>Sleep page</div>;
+  return <div className='sleep'>Sleep page</div>;
 }
 
 export default SleepPage;
