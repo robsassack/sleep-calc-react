@@ -25,3 +25,8 @@ button {
   font-size: 1.25em;
   cursor: pointer;
 }
+
+input {
+  background-color: #595d86;
+  color: #cdd0f1;
+}
