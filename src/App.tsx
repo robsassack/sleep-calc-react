@@ -26,7 +26,11 @@ function App() {
     <div className='App'>
       <div className='App--header'>Sleep Calculator🌙</div>
       <div className='App--body'>
-        {startMenu ? <FormPage></FormPage> : <SleepPage></SleepPage>}
+        {startMenu ? (
+          <FormPage setSleep={setSleep} setStartMenu={setStartMenu} />
+        ) : (
+          <SleepPage sleep={sleep} fallAsleep={fallAsleep} addSleep={addSleep} />
+        )}
       </div>
       <div className='App--add-sleep-time'>
         <input
@@ -62,7 +66,10 @@ function App() {
         </div>
       )}
       <div className='App--footer'>
-        <a href='https://github.com/robsassack/sleep-calc-react/' aria-label="GitHub repository link">
+        <a
+          href='https://github.com/robsassack/sleep-calc-react/'
+          aria-label='GitHub repository link'
+        >
           <i className='fa-brands fa-github github-logo'></i>
         </a>
       </div>
