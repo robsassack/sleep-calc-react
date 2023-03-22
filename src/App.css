@@ -9,6 +9,20 @@
   font-size: 2.5em;
 }
 
+.App--add-sleep-time {
+  font-size: 1.25em;
+}
+
+#App--sleep-checkbox {
+  margin-right: 10px;
+}
+
+#App--fall-asleep-mins {
+  font-size: 1.1em;
+  margin: 0 10px;
+  width: 50px;
+}
+
 .App--footer {
   display: flex;
   justify-content: center;

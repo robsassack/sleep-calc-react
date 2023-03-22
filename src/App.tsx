@@ -37,19 +37,23 @@ function App() {
           onChange={handleExtraSleep}
         />
         <label htmlFor='App--sleep-checkbox'>
-          <span className='App--sleep-checkbox-text'>
-            Include
-            <input
-              type='number'
-              name='App--fall-asleep-mins'
-              id='App--fall-asleep-mins'
-              min={1}
-              max={60}
-              value={fallAsleep}
-              onChange={(e) => handleAsleepMins(parseInt(e.target.value))}
-            />
-            minutes to fall asleep
-          </span>
+          <span className='App--sleep-checkbox-text'>Include</span>
+        </label>
+        <input
+          type='number'
+          name='App--fall-asleep-mins'
+          id='App--fall-asleep-mins'
+          min={1}
+          max={60}
+          value={fallAsleep}
+          onChange={(e) => handleAsleepMins(parseInt(e.target.value))}
+          className='App--fall-asleep-mins'
+        />
+        <label
+          htmlFor='App--fall-asleep-mins'
+          className='App--sleep-checkbox-text'
+        >
+          minutes to fall asleep
         </label>
       </div>
       {!startMenu && (
