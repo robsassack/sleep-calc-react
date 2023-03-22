@@ -62,7 +62,7 @@ function App() {
         </div>
       )}
       <div className='App--footer'>
-        <a href='https://github.com/robsassack/sleep-calc-react/'>
+        <a href='https://github.com/robsassack/sleep-calc-react/' aria-label="GitHub repository link">
           <i className='fa-brands fa-github github-logo'></i>
         </a>
       </div>

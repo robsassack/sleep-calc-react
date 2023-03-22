@@ -17,9 +17,9 @@ body {
 }
 
 button {
-  background-color: #595d86;
+  background-color: #4A4A73;
   border: 1px solid #979ddd;
-  color: #cdd0f1;
+  color: #EBEEF9;
   padding: 5px 20px;
   border-radius: 5px;
   font-size: 1.25em;
@@ -27,6 +27,6 @@ button {
 }
 
 input {
-  background-color: #595d86;
-  color: #cdd0f1;
+  background-color: #4A4A73;
+  color: #EBEEF9;
 }
