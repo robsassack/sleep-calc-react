@@ -9,17 +9,18 @@ function FormPage(props: any) {
     if (mode === "now") {
       // get current time
       const now = new Date();
-      const time = `${now.getHours()}:${now.getMinutes()}`;
+      const hours = now.getHours();
+      const minutes = now.getMinutes();
+      let minutesString = minutes.toString();
+      if (minutes < 10) minutesString = "0" + minutes.toString();
+      const time = `${hours}:${minutesString}`;
       props.setSleep({ mode: "now", time });
-      console.log("Sleep now");
     } else if (mode === "wake") {
       if (wakeTime === "") return;
       props.setSleep({ mode: "wake", time: wakeTime });
-      console.log("Wake at", wakeTime);
     } else if (mode === "sleep") {
       if (sleepTime === "") return;
       props.setSleep({ mode: "sleep", time: sleepTime });
-      console.log("Sleep at", sleepTime);
     }
     props.setStartMenu(false);
   };

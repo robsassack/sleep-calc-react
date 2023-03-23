@@ -62,7 +62,7 @@ function App() {
       </div>
       {!startMenu && (
         <div className='App--restart'>
-          <button onClick={() => setStartMenu(true)}>Restart</button>
+          <button onClick={() => setStartMenu(true)}>Start over</button>
         </div>
       )}
       <div className='App--footer'>
