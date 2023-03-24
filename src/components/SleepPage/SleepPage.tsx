@@ -33,8 +33,10 @@ function SleepPage(props: any) {
     let content = [];
     for (let i = 6; i > 0; i--) {
       let addTime = 0;
-      if (props.sleep.mode === "wake") addTime = -90 * i - extraSleep;
-      else addTime = 90 * i + extraSleep;
+      let tempExtraSleep = 0;
+      if (!Number.isNaN(extraSleep)) tempExtraSleep = extraSleep;
+      if (props.sleep.mode === "wake") addTime = -90 * i - tempExtraSleep;
+      else addTime = 90 * i + tempExtraSleep;
       content.push(
         <div className='sleep--list-item' key={"cycle-" + i}>
           <div className={"sleep--cycle-" + i}>
