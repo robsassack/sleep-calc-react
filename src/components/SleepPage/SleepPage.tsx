@@ -39,7 +39,7 @@ function SleepPage(props: any) {
       else addTime = 90 * i + tempExtraSleep;
       content.push(
         <div className='sleep--list-item' key={"cycle-" + i}>
-          <div className={"sleep--cycle-" + i}>
+          <div className={"sleep--cycle-time sleep--cycle-" + i}>
             {formatTime(addMinutes(props.sleep.time, addTime))}
           </div>
           <div className='sleep--cycle-count'>
