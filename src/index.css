@@ -27,8 +27,12 @@ button {
 }
 
 button:active {
-  background-color: #979ddd;
+  background-color: #979ddd !important;
   color: #2e3047;
+}
+
+button:hover {
+  background-color: #616196;
 }
 
 input {

@@ -4,16 +4,10 @@ function SleepPage(props: any) {
   let extraSleep = 0;
   if (props.addSleep) extraSleep = props.fallAsleep;
 
-  const formatTime = (time: string) => {
-    const [hoursString, minutesString] = time.split(":");
-    const hours = parseInt(hoursString);
-    const minutes = parseInt(minutesString);
-    const period = hours < 12 ? "AM" : "PM";
-    const hours12 = hours % 12 === 0 ? 12 : hours % 12;
-    const hours12String = hours12 === 0 ? "12" : hours12.toString();
-    const newTimeString = `${hours12String}:${minutesString} ${period}`;
-    return newTimeString;
-  };
+  const formatTime = (time: string) =>
+    `${parseInt(time.slice(0, 2)) % 12 || 12}:${time.slice(3)} ${
+      parseInt(time.slice(0, 2)) < 12 ? "AM" : "PM"
+    }`;
 
   const addMinutes = (time: string, minutesToAdd: number) => {
     const [hoursString, minutesString] = time.split(":");
