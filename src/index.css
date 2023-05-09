@@ -25,6 +25,7 @@ button {
   font-size: 1.25em;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  user-select: none;
 }
 
 button:active {
