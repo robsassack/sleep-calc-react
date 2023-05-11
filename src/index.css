@@ -6,10 +6,15 @@
   font-weight: 400;
 }
 
+html {
+  background-color: #2e3047;
+}
+
 body {
   background: linear-gradient(180deg, #2e3047 0%, #1c2331 100%);
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   min-height: 100vh;
   color: #979ddd;
   padding-top: 15px;
