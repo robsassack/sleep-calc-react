@@ -8,6 +8,7 @@
 .App--header {
   text-align: center;
   font-size: 2.5em;
+  user-select: none;
 }
 
 .App--add-sleep-time {
